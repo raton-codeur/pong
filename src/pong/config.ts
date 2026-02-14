@@ -37,7 +37,7 @@ export const defaultSettings: Settings = {
   ballSpeed: 120,
   autoServe: false,
   autoServeDelay: 1,
-  mouse: false,
+  mouse: true,
   trail: false,
   winningScore: 5,
 };
