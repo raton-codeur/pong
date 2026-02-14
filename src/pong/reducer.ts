@@ -77,7 +77,7 @@ export default function reducer(uiState: UIState, action: UIAction): UIState {
           return { ...uiState, settings: { ...uiState.settings, trail: action.trail } };
 
         case "setWinningScore":
-          if (action.winningScore <= uiState.leftScore || action.winningScore <= uiState.rightScore)
+          if (uiState.prevMenu !== "gameOver" && (action.winningScore <= uiState.leftScore || action.winningScore <= uiState.rightScore))
             return uiState;
           return {
             ...uiState,
